@@ -1,0 +1,25 @@
+logging:
+  level:
+    .: INFO
+logging.config: classpath:logback-spring.xml
+logging.pattern.file: '%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n'
+spring:
+  application:
+    name: ms-econtract-test
+  cloud:
+    config:
+      #uri: https://admin:admin@dcmwdevtest01:8888
+      uri: https://admin:admin@apidev.int.easycredit.vn:8888
+server:
+  port: 18100
+  
+management:
+  security:
+    enabled: true
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+  

@@ -1,0 +1,28 @@
+# logger
+logging:
+  level:
+    root: INFO
+
+server:
+    port: 8081
+    
+imx-api:
+  disbursementInfoUrl: http://localhost:8082/contract-info
+  disbursementSuccessUrl: http://localhost:8082/success
+  disbursementRejectUrl: http://localhost:8082/reject
+  timeout: 50
+
+key-public:
+  keyPath: D:\project\MS_DisbursementApi\KeyPair
+  
+spring:
+  rabbitmq:
+    host: 192.168.100.243
+    port: 5672    
+    username: developer
+    password: abc1234
+
+jackson:
+  deserialization:
+    ACCEPT_EMPTY_STRING_AS_NULL_OBJECT: true
+    ACCEPT_SINGLE_VALUE_AS_ARRAY: true

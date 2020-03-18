@@ -1,0 +1,36 @@
+# logger
+logging:
+  level:
+    root: INFO
+  file: /var/log/easycredit/ms-e-contract-dev.log
+
+logging.config: classpath:logback-spring.xml
+logging.pattern.file: '%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n'
+
+server:
+  port: 8080
+  #https
+  ssl:
+    enabled: true
+    key-store: ///D:/Company/InternalTools/Docs/dcmwdevtest02.p12
+    key-store-password: changeit
+    # key-store-password: '{cipher}AQBDsoF/28PRCBdAIHajZyXxf8BR8DIlucNND0h69hTrE/KNt2INRK4v54ARdDUITGSrFW87BMrv7XWgFp5ETEwdBIHqC22eP++OL39S8uuOOTWtbIW/NpSGBZs2mwy5CnnpqgMoeDkG3i1BuOdql/VIPtMsVWrUeYXXdVr3Mr5kRptV+Pc9q74ci/HQHlO1B2nO5I6fOEkAIuhWcUAT/aZH1VJDz19iGkeOzMd/6EPntLM+vhE6L87mGreiR0iVd1CHBzM/Yxwr3bDolvOFYyQkUdMerSa5Rn+W/n3T7G+Q7BtFuCK7l/C7J8IbRUPEJa5LN0/4FSSTyAQ9Yh2tIi1fDAnSa5ROvY1t9B6GG2gfh+Pvb2iSby09SKj+x+TnbXs='
+    key-store-type: PKCS12
+
+spring:
+  application:
+    name: ms-econtract-dev
+  cloud:
+    config:
+      uri: https://admin:admin@apidev.int.easycredit.vn:8888
+  
+management:
+  security:
+    enabled: true
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+  
